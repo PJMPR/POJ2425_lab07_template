@@ -7,21 +7,21 @@ public class MainProgram {
     public static void main(String[] args){
 
         /**
-         * Utwórz klasę 'Student' z polami :
-         * ->name
-         * ->surname
-         * ->dateOfBirth
-         * ->gender
-         *
-         * oraz
-         *
-         * -> indexNumber
+         * Zadanie 1:
+         * Utwórz klasę 'Student' z poniższymi polami:
+         * - name (imię)
+         * - surname (nazwisko)
+         * - dateOfBirth (data urodzenia, typ LocalDate)
+         * - gender (np. Gender.MALE / Gender.FEMALE)
+         * - indexNumber (numer indeksu studenta)
          */
 
 //        Student janekKowalski = new Student("janeczek", "kowalski", LocalDate.of(1999, 01, 03), Gender.MALE);
 
         /**
-         * dodaj gettery oraz setter do wszystkich pól w klasie Student
+         * Zadanie 2:
+         * Dodaj metody dostępowe (gettery i settery) dla wszystkich pól klasy Student.
+         * Następnie ustaw wartości za pomocą setterów i wyświetl dane w konsoli.
          */
 
 //        janekKowalski.setName("Jan");
@@ -35,16 +35,11 @@ public class MainProgram {
 
 
         /**
-         * Utwórz klasę 'Lecturer' z polami :
-         * ->name
-         * ->surname
-         * ->dateOfBirth
-         * ->gender
-         *
-         * oraz
-         * -> title
-         *
-         * oraz gettery i settery
+         * Zadanie 3:
+         * Utwórz klasę 'Lecturer' (wykładowca) z polami:
+         * - name, surname, dateOfBirth, gender (jak w Student)
+         * - title (np. PhD, Prof.)
+         * Dodaj gettery i settery do wszystkich pól.
          */
 
 //        Lecturer aniaNowak = new Lecturer("ania", "nowak", LocalDate.of(1980, 05, 10), Gender.FEMALE);
@@ -59,17 +54,11 @@ public class MainProgram {
 //                +" " +aniaNowak.getTitle());
 
         /**
-         * Utwórz klasę 'Scholar' z polami :
-         * ->name
-         * ->surname
-         * ->dateOfBirth
-         * ->gender
-
-         * -> indexNumber
-         *
-         * oraz
-         *
-         * -> scholarship (kwota stypendium)
+         * Zadanie 4:
+         * Utwórz klasę 'Scholar' (stypendysta), która dziedziczy po Student.
+         * Dodaj pole:
+         * - scholarship (kwota stypendium, typ double)
+         * Dodaj gettery i settery dla tego pola.
          */
 
 //        Scholar fryderykNowak = new Scholar("fryderyk", "nowak", LocalDate.of(1997, 05, 15), Gender.MALE);
@@ -86,10 +75,10 @@ public class MainProgram {
 //                +" " +fryderykNowak.getScholarship());
 
         /**
-         * Zauważ, że klasy które zostały stworzone są bardzo do siebie podobne
-         * tzn. posiadają identyczne konstruktory, wspólne pola, oraz gettery i settery
-         *
-         * Utwórz nową klasę 'PersonBase', która będzie klasą bazową dla powyższych klas
+         * Zadanie 5:
+         * Klasy Student, Lecturer i Scholar zawierają wiele wspólnych elementów.
+         * Wydziel wspólne pola, konstruktory i metody (gettery/settery) do nowej klasy bazowej 'PersonBase'.
+         * Następnie sprawdź, czy możesz przypisać obiekty tych klas do zmiennej typu PersonBase.
          */
 
 //        PersonBase janeczek = janekKowalski;
@@ -97,37 +86,10 @@ public class MainProgram {
 //        PersonBase fredek = fryderykNowak;
 
         /**
-         * wspólne pola, konstruktory, oraz gettery i settery
-         * wydziel z klas Student, Lecturer, Scholar
-         * do klasy PersonBase
-         */
-
-
-//        fredek.setName("Fryderyk");
-//        fredek.setSurname("Nowak");
-//        System.out.println(fredek.getName()
-//                +" " + fredek.getSurname()
-//                +" " +fredek.getDateOfBirth()
-//                +" " +fredek.getGender());
-
-
-//        aniusia.setName("Anna");
-//        aniusia.setSurname("Nowak");
-//        System.out.println(aniusia.getName()
-//                +" " + aniusia.getSurname()
-//                +" " +aniusia.getDateOfBirth()
-//                +" " +aniusia.getGender());
-
-
-//        janeczek.setName("Jan");
-//        janeczek.setSurname("Kowalski");
-//        System.out.println(janeczek.getName()
-//                +" " + janeczek.getSurname()
-//                +" " +janeczek.getDateOfBirth()
-//                +" " +janeczek.getGender());
-        /**
-         * klasa PersonBase powinna być klasą abstrakcyjną,
-         * nie powinno się dać utworzyć instancji tej klasy
+         * Zadanie 6:
+         * Zadbaj, aby klasa PersonBase była klasą abstrakcyjną.
+         * Nie powinno być możliwe utworzenie obiektu tej klasy.
+         * (Upewnij się, że próba `new PersonBase(...)` kończy się błędem kompilacji).
          */
 
 //        PersonBase osoba =
@@ -135,10 +97,9 @@ public class MainProgram {
         //-> powyższa linijka powinna zwracać błąd kompilacji - jeśli tak jest zakomentuj ją (ta linijka ma NIE działać).
 
         /**
-         * Zadeklaruj abstrakcyjną metodę 'printPersonDetails' w klasie PersonBase.
-         * Klasy potomne t.j. Student, Lecturer, Scholar powinny ją implementować
-         * tak aby na ekranie konsoli były wyświetlone wszystkie informacje
-         * o danej osobie
+         * Zadanie 7:
+         * W klasie PersonBase zadeklaruj metodę abstrakcyjną `printPersonDetails()`.
+         * Każda klasa potomna powinna zaimplementować tę metodę, tak aby wypisywała komplet informacji o obiekcie.
          */
 
 //        fredek.printPersonDetails();
@@ -146,13 +107,13 @@ public class MainProgram {
 //        janeczek.printPersonDetails();
 
         /**
-         * Spróbuj zaimplementować (poprawić kod) według zasady
-         * 'DRY - DO NOT REPEAT YOURSELF - '
-         * tzn. jeśli kod w implementacjach metody się powtarza
-         * to spróbuj część wspólną wydzielić do klasy nadrzędnej 'PersonBase'
+         * Zadanie 8:
+         * Zastosuj zasadę DRY – jeśli zauważysz powtarzające się fragmenty kodu
+         * w implementacjach `printPersonDetails()`, przenieś wspólne elementy do klasy bazowej PersonBase.
          */
 
 //        System.out.println("KONIEC");
 
     }
 }
+
