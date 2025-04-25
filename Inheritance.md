@@ -1,6 +1,6 @@
 # 📚 Dziedziczenie, nadpisywanie metod i konstruktory w Javie – dokumentacja
 
-Ten dokument zawiera krótkie i zrozumiałe wprowadzenie do tematu dziedziczenia w języku Java. Dodatkowo przedstawia zagadnienia takie jak nadpisywanie metod, konstruktory, słówko `super` oraz `abstract` – wszystko poparte prostymi przykładami.
+Ten dokument zawiera krótkie i zrozumiałe wprowadzenie do tematu dziedziczenia w języku Java. Dodatkowo przedstawia zagadnienia takie jak nadpisywanie metod, konstruktory, słówko `super` oraz `abstract.
 
 ---
 
